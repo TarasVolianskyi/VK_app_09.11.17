@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.volianskyi.taras.vk_app_091117.MainActivity">
 
-
+<Button
+    android:id="@+id/btnAuthorisationMainActivity"
+    android:text="@string/authorization"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
 
 </RelativeLayout>

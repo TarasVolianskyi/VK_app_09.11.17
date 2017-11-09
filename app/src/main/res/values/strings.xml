@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">VK_app_09.11.17</string>
+    <string name="authorization">Authorization</string>
     <integer name="com_vk_sdk_AppId">6253534</integer>
 </resources>
