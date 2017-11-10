@@ -2,5 +2,6 @@
     <string name="app_name">VK_app_09.11.17</string>
     <string name="authorization">Authorization</string>
     <string name="logout">Log out</string>
+    <string name="list">List</string>
     <integer name="com_vk_sdk_AppId">6253534</integer>
 </resources>

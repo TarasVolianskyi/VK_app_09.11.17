@@ -28,13 +28,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         //String[] fingerprints = VKUtil.getCertificateFingerprint(this, this.getPackageName());
         //System.out.println(Arrays.asList(fingerprints));
-
         initView();
     }
 
     private void initView() {
         Button authorization = (Button) findViewById(R.id.btnAuthorisationMainActivity);
+        Button logOut = (Button) findViewById(R.id.btnLogOutMainActivity);
+        Button list = (Button) findViewById(R.id.btnListMainActivity);
         authorization.setOnClickListener(this);
+        logOut.setOnClickListener(this);
+        list.setOnClickListener(this);
     }
 
     @Override
@@ -56,6 +59,18 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        VKSdk.login(this);
+        switch (view.getId()) {
+            case R.id.btnAuthorisationMainActivity:
+                VKSdk.login(this);
+                break;
+            case R.id.btnLogOutMainActivity:
+                if(VKSdk.isLoggedIn())
+                VKSdk.logout();
+                break;
+            case R.id.btnListMainActivity:
+                startActivity(new Intent(MainActivity.this, ListOfVideoActivity.class));
+                break;
+        }
+
     }
 }
